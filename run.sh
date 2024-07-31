@@ -1,0 +1,1 @@
+make && ./Voxelium2D

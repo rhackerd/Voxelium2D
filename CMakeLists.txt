@@ -8,11 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add every .cpp file to the executable
 file(GLOB SOURCE_FILES "src/*.cpp")
 
+file(GLOB HEADER_FILES "src/*.hpp")
+
 # Find the raylib package
 find_package(raylib REQUIRED)
 
+
+
 # Add the executable
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} src/Voxelium.cpp)
 
 # Link the executable with the raylib library
 target_link_libraries(${PROJECT_NAME} raylib)
